@@ -1,0 +1,68 @@
+
+following are some functions which are used for tuples alse can be used for lists 
+
+
+| Function      | Works on Tuples? | Works on Lists? | Notes                                                           |
+| ------------- | ---------------- | --------------- | --------------------------------------------------------------- |
+| `len()`       | ✅                | ✅               | Count of elements                                               |
+| `max()`       | ✅                | ✅               | Largest element                                                 |
+| `min()`       | ✅                | ✅               | Smallest element                                                |
+| `sum()`       | ✅                | ✅               | Only if elements are numbers                                    |
+| `sorted()`    | ✅                | ✅               | Returns a new **list**, does not change original                |
+| `tuple()`     | ✅ (for nesting)  | ✅               | Converts iterable to a tuple                                    |
+| `list()`      | ✅                | ✅               | Converts iterable to a list                                     |
+| `any()`       | ✅                | ✅               | `True` if any item is `True`                                    |
+| `all()`       | ✅                | ✅               | `True` if all items are `True`                                  |
+| `enumerate()` | ✅                | ✅               | Often used in loops: `for i, val in enumerate(lst)`             |
+| `reversed()`  | ✅                | ✅               | Returns a reverse iterator (convert with `list()` or `tuple()`) |
+
+
+following are some functions which are used for tuples alse can be used for lists 
+
+| Function           | Description                                                        |
+| ------------------ | ------------------------------------------------------------------ |
+| `len(tuple)`       | Returns the number of items in the tuple                           |
+| `max(tuple)`       | Returns the largest item                                           |
+| `min(tuple)`       | Returns the smallest item                                          |
+| `sum(tuple)`       | Returns the sum of all items (only for numeric values)             |
+| `sorted(tuple)`    | Returns a sorted **list** from the tuple (tuple stays unchanged)   |
+| `tuple(iterable)`  | Converts an iterable (like a list) into a tuple                    |
+| `any(tuple)`       | Returns `True` if any element is `True`                            |
+| `all(tuple)`       | Returns `True` if all elements are `True`                          |
+| `enumerate(tuple)` | Returns an enumerate object with index-value pairs                 |
+| `reversed(tuple)`  | Returns a reversed iterator (can convert to tuple using `tuple()`) |
+
+
+following are some functions which are used for lists only 
+
+🔁 Difference: List Has More Methods
+Unlike tuples, lists are mutable, so they also have many built-in methods like:
+
+.append(x)
+
+.insert(i, x)
+
+.pop([i])
+
+.remove(x)
+
+.reverse()
+
+.sort()
+
+.extend(iterable)
+
+These do not work on tuples because tuples cannot be changed after creation.
+
+
+| Feature                                                             | Tuples | Lists                 |
+| ------------------------------------------------------------------- | ------ | --------------------- |
+| Immutable                                                           | ✅      | ❌                     |
+| Hashable (can be dict key)                                          | ✅      | ❌                     |
+| `append()`, `remove()` etc.                                         | ❌      | ✅                     |
+| Can be used as `*args`                                              | ✅      | ✅ (but becomes tuple) |
+| Can use all built-in iterable functions like `len()`, `max()`, etc. | ✅      | ✅                     |
+
+
+hash((1, 2, 3))  # ✅ Works for tuple
+hash([1, 2, 3])  # ❌ TypeError for list
